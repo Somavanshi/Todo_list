@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+#container {
+    width: 60vw;
+    height: 55vh;
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    font-family: cursive;
+}
+
+.todo-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.todo-input button {
+    border: none;
+    padding: 7px 16px;
+    background-color: rgb(17, 17, 16);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.todo-input button:hover {
+    background-color: rgb(56, 56, 51);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    padding: 4px;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+}
+
+
+/* .check-input~label {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #5d5a5a;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.check-input:checked~label:after {
+    position: relative;
+    top: -5px;
+    left: 1px;
+    content: '\2714';
+    font-size: 14px;
+    color: green;
+} */
+
+.check-input {
+    clip-path: circle(36%);
+    transform: scale(1.5);
+}
+
+li span {
+    margin-left: 20px;
+    ;
+}
+
+li button {
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    transition: all 0.1s ease-in;
+}
+
+li button:hover {
+    color: red;
+    font-size: 1.2rem;
+}
+
+ul {
+    height: 30%;
+    overflow-y: auto;
+}
+
+.active {
+    font-weight: bold;
+}
+.add-line {
+    text-decoration: line-through;
+}
+
+.filters {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+
+
+

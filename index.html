@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Todo List</h1>
+        <div class="todo-input">
+            <input type="text" placeholder="write your task here" id="task-input">
+            <button id="add-button">Add</button>
+        </div>
+        <ul id="task-list">
+
+        </ul>
+        <h3>Total Task: <span id="total-items">0</span></h3>
+        <div class="filters">
+            <span id="all" class="active">All</span>
+            <span id="completed">Completed</span>
+            <span id="pending">Pending</span>
+        </div>
+    </div>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
