@@ -1,7 +1,7 @@
 
 
 let tasks = [];
-
+// it add the new task in the list
 function addItem(taskName) {
     const task = {
         id: Date.now().toString(),
@@ -14,7 +14,7 @@ function addItem(taskName) {
     renderList()
     return;
 }
-
+// to show selected filter we have added this functionality
 const filters = document.querySelectorAll('.filters span');
 
 filters.forEach(function (filter) {
@@ -27,7 +27,7 @@ filters.forEach(function (filter) {
 });
 function refreshPreviousTasks() {
     const ul = document.getElementById('task-list');
-    ul.innerHTML = "";
+    ul.innerHTML = "";  // remove the list items to refresh the list
 }
 function renderList(filter = "all") {
     const taskList = document.getElementById("task-list");
@@ -39,7 +39,8 @@ function renderList(filter = "all") {
         if (filter === "completed" && !task.completed)
             continue;
         const listItem = document.createElement("li");
-        listItem.innerHTML = `
+        // dynamically adding element to ul list
+        listItem.innerHTML = `   
             <input type="checkbox" id="check-input${task.id}" class="check-input" ${task.completed ? "checked" : ""}>
             <span id="list-text" class=${task.completed ? "add-line" : ""}>${task.taskName}</span>
             <button class="checked-button"><i class="fa-regular fa-circle-xmark checked-button" id="checked-button${task.id}"></i></button>
@@ -50,6 +51,7 @@ function renderList(filter = "all") {
     return;
 }
 
+// it handle toggle of completed and pending tasks
 function toggleInput(id) {
     tasks = tasks.map((task) => {
         if (id.includes(task.id)) {
@@ -96,6 +98,8 @@ function filterOutPut(id) {
 
     return;
 }
+
+// we have added common event listener to avoid multiple listeners
 document.addEventListener("click", function (event) {
     const target = event.target;
 
@@ -114,6 +118,7 @@ document.addEventListener("click", function (event) {
     }
 });
 
+// to handle enter key press events
 document.addEventListener("keyup", function (event) {
     if (event.key === 'Enter' || event.keyCode === 13) {
         const taskInput = document.getElementById("task-input");
